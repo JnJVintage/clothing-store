@@ -205,7 +205,10 @@ app.post('/admin/delete-product', checkAdminPrivileges, (req, res) => {
     storeInventory = storeInventory.filter(item => item.id !== prodId);
     res.redirect('/');
 });
-
+// Serve Main Store Homepage
+app.get('/', (req, res) => {
+    res.send(renderHTML(req.session));
+});
 // Start the Backend Web Server
 app.listen(PORT, () => {
     console.log(`Application running securely at http://localhost:${PORT}`);

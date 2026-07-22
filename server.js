@@ -207,7 +207,7 @@ app.post('/admin/delete-product', checkAdminPrivileges, (req, res) => {
 });
 // Serve Main Store Homepage
 app.get('/', (req, res) => {
-    res.send(renderHTML(req.session));
+    res.send('<h1>J N J Vintages is Live!</h1>');
 });
 // Start the Backend Web Server
 app.listen(PORT, () => {

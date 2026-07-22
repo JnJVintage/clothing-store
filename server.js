@@ -1,7 +1,7 @@
 const express = require('express');
 const session = require('express-session');
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 // 1. MIDDLEWARE SETUP (Everything a modern web server needs)
 app.use(express.urlencoded({ extended: true })); // Parses form submissions
